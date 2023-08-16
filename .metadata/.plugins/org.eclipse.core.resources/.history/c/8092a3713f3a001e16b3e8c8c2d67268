@@ -1,0 +1,9 @@
+package anno_pp;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Bonche {
+
+	
+}

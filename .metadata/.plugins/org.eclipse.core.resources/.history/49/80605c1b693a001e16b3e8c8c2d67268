@@ -1,0 +1,5 @@
+package beantt.com.sub1;
+
+public class Water {
+	String water = "물 많이";
+}

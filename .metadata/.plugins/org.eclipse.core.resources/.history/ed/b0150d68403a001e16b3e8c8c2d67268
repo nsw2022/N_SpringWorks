@@ -1,0 +1,17 @@
+package anno_pp;
+
+import anno_p_sub1.Mouse;
+import anno_p_sub2.Monitor;
+
+public class DESKTop {
+	
+	Bonche bc;
+	
+	Mouse mouse;
+	
+	Monitor monitor;
+	
+	String name = "오마이피씨";
+	
+
+}

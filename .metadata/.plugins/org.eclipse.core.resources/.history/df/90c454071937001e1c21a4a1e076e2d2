@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<beans xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+-<bean name="cs" class="di_p.CoffeeShop">
+
+<lookup-method name="order_am" bean="co"/>
+
+</bean>
+
+
+-<bean name="co" class="di_p.Coffee">
+
+<constructor-arg value="아시아노"/>
+
+<constructor-arg value="1600"/>
+
+</bean>
+
+</beans>

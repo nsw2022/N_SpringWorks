@@ -1,0 +1,19 @@
+package di_p;
+
+public class Restaurant {
+
+	
+	
+	class Morning{
+		
+	}
+	
+	class launch{
+		
+	}
+	
+	class dinner{
+		
+	}
+}
+

@@ -1,0 +1,23 @@
+package bycycle;
+
+public class PokaBycycle implements BycycleCategory {
+
+	@Override
+	public void go(int ba) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void fix() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void fall() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean class="bycycle.MTBBycycle" name="byB">
+		<property name="ba">
+			<list>
+				<ref bean="wh"/>
+				<ref bean="wh"/>
+			</list>
+		</property>
+		
+	</bean>
+	
+	<bean class="bycycle.PokaBycycle" name="byP">
+		<property name="ba">
+			<list>
+				<ref bean="wh"/>
+				<ref bean="wh"/>
+				<ref bean="wh"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="bycycle.ThreeBycycle" name="byT">
+		<property name="ba">
+			<list>
+				<ref bean="wh"/>
+				<ref bean="wh"/>
+				<ref bean="wh"/>
+			</list>
+		</property>
+		
+		<property name="bagu" value="바구니">
+			
+		</property>
+		
+	</bean>
+	
+	<bean class="bycycle.baarr" name="wheels">
+		<property name="wh" value="wh"/>
+	</bean>
+	
+	<bean class="bycle.Handle" name = "handle">
+		<property name="han" value="han"/>
+	</bean>
+
+</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	
+	<bean class="di_p.StudentTest" name="stuInfo">
+		<constructor-arg>
+			<map>
+				<entry>
+					<key><value>일승우</value></key>
+					<value></value>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+</beans>

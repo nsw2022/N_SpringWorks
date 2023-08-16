@@ -1,0 +1,42 @@
+package di_p;
+
+public class Restaurant {
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public class Morning{
+		String name;
+
+		public Morning(String name) {
+			super();
+			this.name = name;
+		}
+		
+	}
+	
+	public class launch{
+		String name;
+
+		public launch(String name) {
+			super();
+			this.name = name;
+		}
+	}
+	
+	public class dinner{
+		String name;
+
+		public dinner(String name) {
+			super();
+			this.name = name;
+		}
+	}
+}
+

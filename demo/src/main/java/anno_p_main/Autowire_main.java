@@ -1,0 +1,18 @@
+package anno_p_main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Autowire_main {
+	
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("anno_xml/Autowire.xml");
+		//System.out.println(context);
+		System.out.println(context.getBean("wm1"));
+		System.out.println();
+		System.out.println(context.getBean("rc1"));
+		context.close();
+	}
+
+}

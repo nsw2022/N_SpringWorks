@@ -1,0 +1,21 @@
+package beanComponent;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CoffeeMain {
+
+	public static void main(String[] args) {
+		
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("anno_xml/coffecomponent.xml");
+		
+		System.out.println(context.getBean("americano"));
+		System.out.println(context.getBean("latte"));
+		System.out.println(context.getBean("latte"));
+		
+		context.close();
+		
+	}
+	
+}

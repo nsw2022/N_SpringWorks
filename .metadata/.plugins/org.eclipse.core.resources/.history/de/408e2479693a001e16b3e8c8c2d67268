@@ -1,0 +1,29 @@
+package beantt.com;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+
+public class Americano implements Coffe{
+	
+	Bean bean;
+	Water water;
+	Price price;
+	
+	
+	@Override
+	public String show(Bean bean, Water water, Price price) {
+		this.bean =bean;
+		this.water =water;
+		this.price =price;
+		
+		return show(bean, water, price);
+	}
+	
+	@Override
+	public String toString() {
+		return show(bean, water, price);
+	}
+	
+	
+}

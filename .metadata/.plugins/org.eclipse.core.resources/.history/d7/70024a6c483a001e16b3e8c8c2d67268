@@ -1,0 +1,9 @@
+package beanComponent;
+
+import di_p.Coffee;
+
+public class Latte extends Americano {
+
+	
+
+}

@@ -1,0 +1,13 @@
+package bean;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class main {
+
+	public main() {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("anno_xml/AnCoffe.xml");
+	}
+	
+}

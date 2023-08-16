@@ -1,0 +1,48 @@
+package beantt.com;
+
+import org.springframework.stereotype.Component;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+
+
+@Component("Americano")
+public class Americano implements Coffe{
+	String name="아메리카노";
+	Bean bean;
+	Water water;
+	Price price;
+	
+	
+	public void setBean(Bean bean) {
+		
+		this.bean = bean;
+	}
+
+	public void setWater(Water water) {
+		this.water = water;
+	}
+
+	public void setPrice(Price price) {
+		this.price = price;
+	}
+
+	@Override
+	public String show(Bean bean, Water water, Price price) {
+		this.bean =bean;
+		this.water =water;
+		this.price =price;
+		
+		return ("커피이름 " +name  + "원두이름= " + bean +"물= "+ water +"가격 ="  + price);
+	}
+	
+
+
+	@Override
+	public String toString() {
+		return show(bean, water, price);
+	}
+	
+	
+}

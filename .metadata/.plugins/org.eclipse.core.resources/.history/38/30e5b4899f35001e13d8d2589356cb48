@@ -1,0 +1,25 @@
+package Taluga;
+
+public class Bycycle implements Unit{
+	
+	int handle;
+	
+	@Override
+	public void go(int handle) {
+		System.out.println(handle+"자전거 출팔");
+		
+	}
+
+	@Override
+	public void fix() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void fall() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

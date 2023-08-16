@@ -1,0 +1,15 @@
+package anno_pp;
+
+import anno_p_sub1.Mouse;
+
+public class NoteBook {
+	Bonche bc;
+	Mouse mouse;
+	String name = "심보그램";
+	@Override
+	public String toString() {
+		return "NoteBook [bc=" + bc + ", mouse=" + mouse + ", name=" + name + "]";
+	}
+	
+	
+}

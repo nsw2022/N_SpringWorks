@@ -1,0 +1,33 @@
+package di_p_main;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import di_p.DIColl;
+
+public class Colletion_main {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context =
+				new ClassPathXmlApplicationContext("di_xml/collection.xml");
+		
+		ArrayList arr1 = (ArrayList) context.getBean("arr1");
+		HashSet ss1 = (HashSet) context.getBean("ss1");
+		LinkedHashSet ss2 = (LinkedHashSet) context.getBean("ss2");
+		HashMap map1 = (HashMap) context.getBean("map1");
+		DIColl dic = (DIColl) context.getBean("dic");
+		
+		System.out.println(arr1);
+		System.out.println(ss1);
+		System.out.println(ss2);
+		System.out.println(map1);
+		System.out.println(dic.getNick()+","+ dic.getAge());
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+package di_p;
+
+public class HandPhone {
+	String name;
+	Carmera cam;
+	
+	public HandPhone() {
+		System.out.println("HandPhone 기본생성자");
+	}
+	
+	@Override
+	public String toString() {
+		return "HandPhone [name=" + name + ", cam=" + cam + "]";
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		System.out.println("setPName()"+name);
+		this.name = name;
+	}
+	public Carmera getCam() {
+		return cam;
+	}
+	public void setCam(Carmera cam) {
+		this.cam = cam;
+	}
+	
+}
+

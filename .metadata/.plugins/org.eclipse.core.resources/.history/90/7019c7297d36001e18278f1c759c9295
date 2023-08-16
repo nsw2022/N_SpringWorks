@@ -1,0 +1,36 @@
+package di_p;
+
+import java.util.Arrays;
+
+public class School {
+	// 학생을 참조로 받고
+	// 학교에서 학생의 점수를 계산
+	
+	StudentTest[] students;
+
+	public StudentTest[] getStudents() {
+		return students;
+	}
+
+	public void setStudents(StudentTest[] students) {
+		this.students = students;
+	}
+
+	public School(StudentTest[] students) {
+		super();
+		this.students = students;
+	}
+
+	public School() {
+		super();
+	}
+	
+	
+
+	
+	
+	
+	
+	
+	
+}

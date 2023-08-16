@@ -1,0 +1,11 @@
+package di_p;
+
+public class Carmera{
+	String name;
+	int pixel;
+	@Override
+	public String toString() {
+		return "Carmera [name=" + name + ", pixel=" + pixel + "]";
+	}
+	
+}

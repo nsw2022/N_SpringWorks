@@ -1,0 +1,23 @@
+package bycycle;
+
+public class PokaBycycle implements BycycleCategory {
+
+	@Override
+	public void go(int ba) {
+		
+
+	}
+
+	@Override
+	public void fix() {
+		
+
+	}
+
+	@Override
+	public void fall() {
+		
+
+	}
+
+}

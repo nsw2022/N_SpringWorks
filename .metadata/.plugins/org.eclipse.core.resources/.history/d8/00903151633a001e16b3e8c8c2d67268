@@ -1,0 +1,55 @@
+package anno_p.comabc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import anno_p_main.com.anno_pp.Bonche;
+import anno_p_main.com.sub1.Mouse;
+import jakarta.annotation.Resource;
+
+
+@Component
+public class NoteBook {
+	
+	@Autowired
+	anno_component.com.Bonche bc;
+	
+	@Resource
+	Mouse mouse;
+	String name = "심보그램";
+	@Override
+	public String toString() {
+		return "NoteBook [bc=" + bc + ", mouse=" + mouse + ", name=" + name + "]";
+	}
+	public NoteBook(Bonche bc, Mouse mouse, String name) {
+		super();
+		this.bc = bc;
+		this.mouse = mouse;
+		this.name = name;
+	}
+	public NoteBook() {
+		super();
+	}
+	public Bonche getBc() {
+		return bc;
+	}
+	public void setBc(anno_component.com.Bonche lG) {
+		this.bc = lG;
+	}
+	public Mouse getMouse() {
+		return mouse;
+	}
+	public void setMouse(Mouse mouse) {
+		this.mouse = mouse;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+	
+}

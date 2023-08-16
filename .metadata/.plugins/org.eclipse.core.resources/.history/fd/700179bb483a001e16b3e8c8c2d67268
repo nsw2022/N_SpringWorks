@@ -1,0 +1,25 @@
+package beanComponent;
+
+import di_p.Coffee;
+
+public class Latte extends Americano {
+	
+	String beanName="조금 좋은 원두", water="안넣지 않나요?",milk="절반넣어요" ;
+	int price=3000;
+
+	public String show(String beanName, String water,String milk , int price) {
+		this.beanName = beanName;
+		this.water=water;
+		this.price=price;
+		this.milk=milk;
+		return("커피이름 : " + beanName + " 물: " + water +" 우유" +milk +" 가격: " + price);
+	}
+
+	@Override
+	public String toString() {
+		return show(beanName, water, milk, price)
+	}
+
+	
+
+}

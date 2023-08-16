@@ -1,0 +1,18 @@
+package di_p_main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import di_p.Restaurant;
+
+public class RestaurantMain {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context =
+				new ClassPathXmlApplicationContext("di_xml/lookupRestaurant.xml");
+		
+		Restaurant rt = (Restaurant) context.getBean("rt");
+		rt.order_menu();
+	}
+
+}

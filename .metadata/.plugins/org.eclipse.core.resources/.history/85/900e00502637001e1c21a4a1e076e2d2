@@ -1,0 +1,10 @@
+package di_p_main;
+
+public class RestaurantMain {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

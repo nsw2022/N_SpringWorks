@@ -1,0 +1,17 @@
+package di_p;
+
+import java.util.Arrays;
+
+public class Shcool {
+	// 학생을 참조로 받고
+	// 학교에서 학생의 점수를 계산
+	
+	StudentTest[] students;
+	
+
+	
+	
+	
+	
+	
+}

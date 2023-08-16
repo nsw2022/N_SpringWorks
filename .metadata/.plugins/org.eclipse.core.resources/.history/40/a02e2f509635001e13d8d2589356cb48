@@ -1,0 +1,18 @@
+package di_p_main;
+
+import di_p.Carmera;
+import di_p.HandPhone;
+
+public class DI_main {
+
+	public static void main(String[] args) {
+		HandPhone hp1 = new HandPhone();
+		Carmera c1 = new Carmera();
+		
+		System.out.println(hp1);
+		System.out.println(c1);
+		
+
+	}
+
+}

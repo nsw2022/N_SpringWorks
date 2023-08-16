@@ -1,0 +1,10 @@
+package beantt.com;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+
+public interface Coffe {
+	public String show(Bean bean, Water water, Price price);
+	public Object configCoffe(Object config);
+}

@@ -1,0 +1,9 @@
+package anno_p_main.com.anno_pp;
+
+import anno_p_main.com.sub1.Mouse;
+
+public class Computers {
+	Mouse hp920() {
+		return new Mouse("HP920","무선");
+	}
+}

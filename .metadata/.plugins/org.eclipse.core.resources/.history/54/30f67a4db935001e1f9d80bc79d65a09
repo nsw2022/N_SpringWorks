@@ -1,0 +1,9 @@
+package bycycle;
+
+public interface BycycleCategory {
+	public void go(int ba);
+	public void fix();
+	public void fall(); 
+}
+
+

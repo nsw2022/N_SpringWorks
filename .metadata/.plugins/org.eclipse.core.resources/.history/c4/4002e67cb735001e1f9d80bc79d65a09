@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean class="bycycle.ThreeBycycle" name="byB">
+		<property name="ba" value="2" />
+		
+	</bean>
+	
+	<bean class="bycycle.PokaBycycle" name="byP">
+		<property name="ba" value="2"/>
+	</bean>
+	
+	<bean class="bycycle.ThreeBycycle" name="byT">
+		<property name="ba" value="3"/>
+		<property name="bagu" value="바구니"/>
+	</bean>
+
+</beans>

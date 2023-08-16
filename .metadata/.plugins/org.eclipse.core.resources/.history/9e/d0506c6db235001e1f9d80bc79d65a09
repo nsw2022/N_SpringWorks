@@ -1,0 +1,24 @@
+package bycycle;
+
+public class MTBBycycle implements BycycleCategory {
+
+	@Override
+	public void go() {
+	
+	}
+
+
+	@Override
+	public void fix() {
+		
+
+	}
+
+	@Override
+	public void fall() {
+		
+
+	}
+
+
+}

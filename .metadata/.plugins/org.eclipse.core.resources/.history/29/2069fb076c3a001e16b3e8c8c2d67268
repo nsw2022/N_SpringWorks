@@ -1,0 +1,5 @@
+package beantt.com.sub1;
+
+public class Bean {
+	String beanName = "기본 원두입니다.";
+}

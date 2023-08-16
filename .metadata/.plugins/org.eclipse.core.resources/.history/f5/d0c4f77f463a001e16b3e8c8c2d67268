@@ -1,0 +1,11 @@
+package bean;
+
+public class Macchiato implements Coffee {
+
+	@Override
+	public void show(String beanName, String water, int price) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

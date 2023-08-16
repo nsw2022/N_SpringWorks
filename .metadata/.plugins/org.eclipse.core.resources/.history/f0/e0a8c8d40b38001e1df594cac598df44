@@ -1,0 +1,5 @@
+package teacherMain;
+
+public interface InterBiCycle {
+
+}

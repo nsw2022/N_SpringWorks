@@ -1,0 +1,20 @@
+package beantt.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CoffeMain {
+	
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("anno_component/beantt.xml");
+		
+		System.out.println( context.getBean("Americano") );
+		System.out.println();
+		System.out.println( context.getBean("Latte") ); 
+		
+		context.close();
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package bycycle;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TEST {
+
+	public static void main(String[] args) {
+		
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("di_xml/BBTEST.xml");
+		MTBBycycle mb = (MTBBycycle) context.getBean("byB");
+		PokaBycycle pb = (PokaBycycle) context.getBean("byP");
+		ThreeBycycle tb = (ThreeBycycle) context.getBean("byT");
+		mb.go(2);
+		pb.go(2);
+		tb.go(3);
+	}
+
+}

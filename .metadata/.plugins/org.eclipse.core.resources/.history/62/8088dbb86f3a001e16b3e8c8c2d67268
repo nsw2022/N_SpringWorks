@@ -1,0 +1,36 @@
+package beantt.com;
+
+import org.springframework.context.annotation.Configuration;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Milk;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+
+@Configuration("Latte")
+public class Latte {
+	
+	@org.springframework.context.annotation.Bean
+	Bean bean() {
+		return new Bean("라떼용 원두입니다");
+	}
+	
+	@org.springframework.context.annotation.Bean
+	Price price() {
+		return new Price(4500);
+	}
+	
+	@org.springframework.context.annotation.Bean
+	Milk milk() {
+		return new Milk("고오급 우유");
+	}
+	
+	@org.springframework.context.annotation.Bean
+	Water water() {
+		return new Water("물은 없습니다.");
+	}
+
+	
+
+	
+}

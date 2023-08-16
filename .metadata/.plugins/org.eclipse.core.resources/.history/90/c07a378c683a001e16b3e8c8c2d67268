@@ -1,0 +1,5 @@
+package beantt.com;
+
+public interface Coffe {
+	public String show(String beanName, String water, int price);
+}

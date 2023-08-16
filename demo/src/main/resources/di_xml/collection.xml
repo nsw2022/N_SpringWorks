@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean class="java.util.ArrayList" name="arr1">
+		<constructor-arg>
+			<list>
+				<value>아기상어</value>
+				<value>귀여운</value>
+				<value>뚜루뚜루루</value>
+				<value>엄마상어</value>
+				<value>어뭐가오죠 고우시네요?</value>
+				<value>뚜루뚜루루</value>
+				
+			</list>
+		</constructor-arg>
+		
+	</bean>
+	
+	<bean class="java.util.HashSet" name="ss1">
+		<constructor-arg>
+			<list>
+				<value>아기상어</value>
+				<value>귀여운</value>
+				<value>뚜루뚜루루</value>
+				<value>엄마상어</value>
+				<value>어뭐가오죠 고우시네요?</value>
+				<value>뚜루뚜루루</value>	
+			</list>
+		</constructor-arg>
+		
+	</bean>
+
+	
+	
+	<bean class="java.util.LinkedHashSet" name="ss2">
+		<constructor-arg>
+			<list>
+				<value>아기상어</value>
+				<value>귀여운</value>
+				<value>뚜루뚜루루</value>
+				<value>엄마상어</value>
+				<value>어뭐가오죠 고우시네요?</value>
+				<value>뚜루뚜루루</value>	
+			</list>
+		</constructor-arg>
+		
+	</bean>
+	
+		
+
+	
+		<bean class="java.util.HashMap" name="map1">
+		<constructor-arg>
+			<map>
+				<entry>
+					<key><value>아기상어</value></key>
+					<value>어류</value>
+				</entry>
+				
+				<entry>
+					<key><value>악어</value></key>
+					<value>파충류</value>
+				</entry>
+				
+				<entry>
+					<key><value>티라노</value></key>
+					<value>공룡</value>
+				</entry>
+				
+				<entry>
+					<key><value>아기상어</value></key>
+					<value>1실방1심실</value>
+				</entry>
+				
+				<entry>
+					<key><value>켄신</value></key>
+					<value>비천어검류</value>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="di_p.DIColl" name="dic">
+		<property name="nick" value="정우성" />
+		<property name="age" value="50" />
+		<property name="arr">
+			<array>
+				<value>11</value>
+				<value>22</value>
+				<value>33</value>
+				<value>44</value>
+				<value>55</value>
+			</array>
+		</property>
+		<property name="arr1" value="66,77,88,99" />
+		<property name="arr2">
+			<list>
+				<value>현빈</value>
+				<value>원빈</value>
+				<value>장희빈</value>
+				<value>커피빈</value>
+			</list>
+		</property>
+		<property name="mm1" ref="map1" />
+		
+	</bean>
+	
+
+</beans>

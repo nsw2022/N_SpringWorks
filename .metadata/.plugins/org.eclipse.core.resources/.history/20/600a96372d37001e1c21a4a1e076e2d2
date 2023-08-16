@@ -1,0 +1,24 @@
+package di_p;
+
+import java.util.List;
+
+public class AutoCar {
+	AutoEngine eng;
+	List<AutoWheel> wheel;
+	AutoHandel handle ;
+
+}
+
+
+class AutoEngine{
+	
+}
+
+class AutoWheel{
+	
+	
+}
+
+class AutoHandel{
+	
+}

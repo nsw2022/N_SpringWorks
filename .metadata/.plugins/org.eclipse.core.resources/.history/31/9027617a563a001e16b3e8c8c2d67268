@@ -1,0 +1,18 @@
+package anno_p_main.com.anno_pp;
+
+import org.springframework.context.annotation.Bean;
+
+import anno_p.comabc.NoteBook;
+import anno_p_main.com.sub1.Mouse;
+
+public class Computers {
+	@Bean
+	Mouse hp920() {
+		return new Mouse("HP920","버티컬");
+	}
+	
+	@Bean
+	NoteBook gal() {
+		return NoteBook();
+	}
+}

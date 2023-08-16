@@ -1,0 +1,5 @@
+package beantt.com.sub1;
+
+public class Price {
+	int price = 100;
+}

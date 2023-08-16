@@ -1,0 +1,17 @@
+package bycycle;
+
+public class TEST {
+
+	public static void main(String[] args) {
+		int ba3 = 3;
+		int ba2 = 2;
+		
+		PokaBycycle po = new PokaBycycle();
+		po.go(ba2);
+		po.fall();
+		po.fix();
+		
+
+	}
+
+}

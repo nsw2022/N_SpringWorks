@@ -1,0 +1,22 @@
+package di_p;
+
+public class AutowisePhone {
+	String type, battery, carmer;
+
+	
+	
+
+	
+
+	
+	
+	
+}
+
+class battery{
+	
+}
+
+carmer{
+	
+}

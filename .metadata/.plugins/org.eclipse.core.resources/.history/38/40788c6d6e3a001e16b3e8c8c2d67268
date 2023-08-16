@@ -1,0 +1,57 @@
+package beantt.com;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+import jakarta.annotation.Resource;
+
+
+@Configuration()
+public class Americano {
+	
+	@org.springframework.context.annotation.Bean
+	Bean bean() {
+		
+		return new Bean("아메리카용 원두입니다");
+	}
+	
+	@org.springframework.context.annotation.Bean
+	Water water() {
+		return new Water("아메리카노 물입니다.");
+	}
+	
+	Price price() {
+		return new Price(1700);
+	}
+	
+	
+	
+	
+	/*
+	@Resource
+	Bean bean;
+	@Resource
+	Water water;
+	@Resource
+	Price price;
+	@Override
+	public String toString() {
+		return "Americano [bean=" + bean + ", water=" + water + ", price=" + price + "]";
+	}
+	public Americano(Bean bean, Water water, Price price) {
+		super();
+		this.bean = bean;
+		this.water = water;
+		this.price = price;
+	}
+	public Americano() {
+		super();
+	}
+	*/
+
+	
+}

@@ -1,0 +1,27 @@
+package beantt.com;
+
+import org.springframework.stereotype.Component;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+import jakarta.annotation.Resource;
+
+
+@Component("Americano")
+public class Americano {
+	
+	@Resource
+	Bean bean;
+
+	@Override
+	public String toString() {
+		return "Americano [bean=" + bean + "]";
+	}
+	
+	
+	
+	
+	
+	
+}

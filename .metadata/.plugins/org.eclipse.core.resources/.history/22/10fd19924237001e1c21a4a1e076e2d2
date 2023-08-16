@@ -1,0 +1,8 @@
+package di_p_main;
+
+public class AutuwisePhoneMain {
+
+	public static void main(String[] args) {
+		
+	}
+}

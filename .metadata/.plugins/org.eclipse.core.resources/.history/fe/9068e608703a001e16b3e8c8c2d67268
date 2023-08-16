@@ -1,0 +1,41 @@
+package beantt.com;
+
+import org.springframework.context.annotation.Configuration;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Caramel;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+
+@Configuration("Macchiato")
+public class Macchiato {
+
+	@org.springframework.context.annotation.Bean
+	Bean bean() {
+		return new Bean("마끼야또 원두입니다");
+	}
+	
+	@org.springframework.context.annotation.Bean
+	Caramel caramel() {
+		return new Caramel("달달해요");
+	}
+	
+	@org.springframework.context.annotation.Bean
+	Price price() {
+		return new Price(6000);
+	}
+	@org.springframework.context.annotation.Bean
+	Water water() {
+		return new Water("물업습니다.");
+	}
+
+	@Override
+	public String toString() {
+		return "Macchiato [원두=" + bean() + ", 카라멜=" + caramel() + ", 가격=" + price() + ", 물="
+				+ water() + "]";
+	}
+
+	
+	
+	
+}

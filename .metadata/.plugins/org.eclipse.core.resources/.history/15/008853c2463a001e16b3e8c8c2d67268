@@ -1,0 +1,7 @@
+package bean;
+
+public interface Coffee {
+	public void show(String beanName, String water, int price);
+	
+	
+}

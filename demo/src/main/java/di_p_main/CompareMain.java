@@ -1,0 +1,109 @@
+package di_p_main;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
+
+public class CompareMain {
+	
+	
+	public static void main(String[] args) {
+		int[] arr = {66,33,22,66,88,77,22,33,34};
+		
+		ArrayList a1 = new ArrayList();
+		HashSet s1 = new HashSet();
+		LinkedHashSet s2 = new LinkedHashSet();
+		
+		TreeSet s3 = new TreeSet();
+		
+
+		TreeSet ts1 = new TreeSet(
+					new Comparator() {
+							
+						@Override
+						public int compare(Object o1, Object o2) {
+							
+							return 0;
+						}
+
+					});
+
+		TreeSet ts2 = new TreeSet(
+				new Comparator() {
+					
+					@Override
+					public int compare(Object o1, Object o2) {
+						
+						return 1;
+					}
+
+				});
+
+		TreeSet ts3 = new TreeSet(
+				new Comparator() {
+					
+					@Override
+					public int compare(Object o1, Object o2) {
+						
+						if (o1 == o2) {
+							return 0;
+						}
+						return 1;
+					}
+					
+				});
+	
+		TreeSet ts4 = new TreeSet(
+				new Comparator() {
+					
+					@Override
+					public int compare(Object o1, Object o2) {
+						
+						int me = (int) o1;
+						int you = (int) o2;
+	
+						System.out.println(me+  ": " +you);
+						
+						
+						return you-me;
+					
+						
+					}
+					
+				});
+		
+		
+		for (int i : arr) {
+			a1.add(i);
+			s1.add(i);
+			s2.add(i);
+			s3.add(i);
+			ts1.add(i);
+			ts2.add(i);
+			ts3.add(i);
+			ts4.add(i);
+			System.out.println(">>");
+		}
+		
+		System.out.println("arr" + Arrays.toString(arr));
+		System.out.println("a1"+a1);//동일
+		System.out.println("s1"+s1);//입력순서랜덤
+		System.out.println("s2"+s2);//입력순서는맞음
+		System.out.println("s3"+s3);//오름차순
+		System.out.println();
+		System.out.println("ts1"+ts1);
+		System.out.println("ts2"+ts2);
+		System.out.println("ts3"+ts3);
+		System.out.println("ts4"+ts4);
+		
+		
+		
+		
+		
+		
+	}
+}

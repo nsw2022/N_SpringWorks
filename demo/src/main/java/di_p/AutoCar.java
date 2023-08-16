@@ -1,0 +1,140 @@
+package di_p;
+
+import java.util.List;
+
+public class AutoCar {
+	String name;
+	AutoEngine eng;
+	List<AutoWheel> wheel;
+	AutoHandel handle;
+	public AutoEngine getEng() {
+		return eng;
+	}
+	public void setEng(AutoEngine eng) {
+		this.eng = eng;
+	}
+	public List<AutoWheel> getWheel() {
+		return wheel;
+	}
+	public void setWhqwer(List<AutoWheel> wheel) {
+		this.wheel = wheel;
+	}
+	public AutoHandel getHandle() {
+		return handle;
+	}
+	public void setHandle(AutoHandel handle) {
+		this.handle = handle;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "AutoCar [name=" + name + ", eng=" + eng + ", wheel=" + wheel + ", handle=" + handle + "]";
+	}
+	
+	// 매개변수로 받을 때 에러가 발생되는 경우에는 작동되지 않는다
+	public AutoCar(AutoEngine eng, List<AutoWheel> wheel, AutoHandel h) {
+		
+		this.eng = eng;
+		this.wheel = wheel;
+		this.handle = h;
+		System.out.println("나는 모두를 받아요");
+	}
+	public AutoCar() {
+		System.out.println("나는 기본이에요");
+	}
+	// 생성자 실행 조건이 모두 충족할 경우 매개변수가 많은 생성자로 생성
+	// 매개변수 할당 우선 순위
+	// 1. byName
+	// 2. byType
+
+	
+	public AutoCar(AutoEngine eng, AutoHandel handle) {
+		super();
+		this.eng = eng;
+		this.handle = handle;
+		System.out.println("나는 엔진과 핸들이에요");
+	}
+	
+	
+
+}
+
+
+class AutoEngine{
+	String name;
+	String power;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPower() {
+		return power;
+	}
+	public void setPower(String power) {
+		this.power = power;
+	}
+	@Override
+	public String toString() {
+		return "AutoEngine [name=" + name + ", power=" + power + "]";
+	}
+	
+	
+	
+}
+
+class AutoWheel{
+	String name;
+	int size;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	@Override
+	public String toString() {
+		return "AutoWheel [name=" + name + ", size=" + size + "]";
+	}
+	
+	
+}
+
+class AutoHandel{
+	String name, type;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	@Override
+	public String toString() {
+		return "AutoHandel [name=" + name + ", type=" + type + "]";
+	}
+	
+	
+}

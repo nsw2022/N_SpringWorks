@@ -1,0 +1,26 @@
+package beantt.com;
+
+import org.springframework.stereotype.Component;
+
+import beantt.com.sub1.Bean;
+import beantt.com.sub1.Price;
+import beantt.com.sub1.Water;
+
+
+@Component("Americano")
+public class Americano implements Coffe{
+
+	@Override
+	public String show(Bean bean, Water water, Price price) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Bean configCoffe(Object config) {
+		
+		return new Bean();
+	}
+	
+	
+}
