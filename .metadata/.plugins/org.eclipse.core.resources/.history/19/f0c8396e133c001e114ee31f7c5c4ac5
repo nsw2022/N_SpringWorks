@@ -1,0 +1,22 @@
+package aop_p_ex.adv;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class FigureAdvice {
+	
+	Object arFiTest(ProceedingJoinPoint joinPoint) {
+		
+		Object res = null;
+		
+		String[] setArr = (Stirng[]) (joinPoint.getArgs()[0]);
+		try {
+			res = joinPoint.proceed();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
+	
+}

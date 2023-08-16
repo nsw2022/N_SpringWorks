@@ -1,0 +1,35 @@
+package aop_p_ex.adv;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class FishAroundAdevice {
+	
+	Object arTest(ProceedingJoinPoint joinPoint) {
+		Object res = null;
+		//System.out.println("진입");
+		
+		try {
+			res = joinPoint.proceed();
+			if (joinPoint.getArgs().length==0) {
+				//System.out.println("테스트!");
+				res = "이걸안가져왔네요 미끼를 넣어주세요";
+				
+			}
+			
+			if (joinPoint.getSignature().getName() == "fishSize") {
+				
+				
+				if ((int) joinPoint.getArgs()[0] < 20) {
+					res = "놓아주죠 어린아이네요 크기가 " + (int) joinPoint.getArgs()[0] + " 밖에안되네요 종류는 " + joinPoint.getArgs()[1];
+				}
+				
+			}
+		} catch (Throwable e) {
+
+			e.printStackTrace();
+		}
+		//System.out.println("완료");
+		return res;
+	}
+
+}

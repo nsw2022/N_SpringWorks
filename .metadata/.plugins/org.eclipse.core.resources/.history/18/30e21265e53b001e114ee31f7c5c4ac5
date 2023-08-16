@@ -1,0 +1,15 @@
+package aop_p_ex.fish;
+
+public class FishDesign {
+	
+	public String catchFish(String mi ) {
+		System.out.println("미끼를 물어분 것이여");
+		return "잡았다! 오늘은 매운탕~";
+	}
+	public String catchFish() {
+		System.out.println("뭔가 허전한디");
+		return "이걸안가져왔네요";
+	}
+	
+	
+}

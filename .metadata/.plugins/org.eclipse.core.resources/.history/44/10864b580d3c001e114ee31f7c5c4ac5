@@ -1,0 +1,9 @@
+package aop_p_ex.fish;
+
+public class Figure {
+	String name;
+	int radius, width, height, hypotenuse;
+	
+	final double PI = Math.PI;
+	
+}

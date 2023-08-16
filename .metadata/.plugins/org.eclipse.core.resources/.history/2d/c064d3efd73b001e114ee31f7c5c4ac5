@@ -1,0 +1,22 @@
+package aop_p.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import aop_p.webToken.JoSuk;
+
+public class AroundMain {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("aop_xml/around.xml");
+		
+		JoSuk jsk = context.getBean("joSuk",JoSuk.class);
+		Object res = jsk.dog1()+"이거쓴순간나와죠";
+		System.out.println("jsk.dog1"+res);
+		
+		context.close();
+
+	}
+
+}

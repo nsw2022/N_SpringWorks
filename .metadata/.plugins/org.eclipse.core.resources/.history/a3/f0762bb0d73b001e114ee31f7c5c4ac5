@@ -1,0 +1,8 @@
+package aop_p.webToken;
+
+public class JoSuk {
+	public String dog1() {
+		System.out.println("센세이션은 찢찣");
+		return "센세이션";
+	}
+}

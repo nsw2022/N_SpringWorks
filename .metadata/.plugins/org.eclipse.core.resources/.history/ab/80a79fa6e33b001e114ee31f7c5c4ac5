@@ -1,0 +1,18 @@
+package aop_p_ex.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import aop_p_ex.fish.FishDesign;
+
+public class FishMain {
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("aop_xml/fish.xml");
+		
+		//FishDesign fi = (FishDesign) context.getBean("FishDessign");
+		System.out.println(context);
+		context.close();
+	}
+
+}

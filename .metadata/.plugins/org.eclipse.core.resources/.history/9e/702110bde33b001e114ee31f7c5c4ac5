@@ -1,0 +1,18 @@
+package aop_p_ex.adv;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class FishAroundAdevice {
+	
+	Object arTest(ProceedingJoinPoint joinPoint) {
+		Object res = null;
+		
+		if (joinPoint.getArgs().length>0) {
+			res = "미끼를 넣으세요!";
+		}
+		
+		
+		return res;
+	}
+
+}

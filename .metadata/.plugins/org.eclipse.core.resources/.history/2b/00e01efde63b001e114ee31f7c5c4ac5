@@ -1,0 +1,28 @@
+package aop_p_ex.main;
+
+import java.util.Arrays;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import aop_p_ex.fish.FishDesign;
+
+public class FishMain {
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("aop_xml/fish.xml");
+		
+	    
+	    //System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
+		
+		FishDesign fi = (FishDesign) context.getBean("fishDesign");
+		System.out.println(fi.catchFish("지렁이"));
+		System.out.println("------------------------------");
+		System.out.println(fi.catchFish());
+		System.out.println("------------------------------");
+		System.out.println(fi.fishSize(20, "방엉"));
+		
+		context.close();
+	}
+
+}

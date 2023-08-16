@@ -1,0 +1,14 @@
+package aop_p_ex.fish;
+
+import java.util.HashMap;
+
+public class FigureCal {
+	
+	HashMap<String, Figure> map;
+	
+	public FigureCal() {
+		map = new HashMap<>();
+		
+		map.put("넓이", new Figure("원", 3));
+	}
+}

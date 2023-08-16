@@ -1,0 +1,15 @@
+package aop_p_ex.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class FigureMain {
+	
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("aop_xml/fiuger_test.xml");
+		
+		context.close();
+	}
+
+}

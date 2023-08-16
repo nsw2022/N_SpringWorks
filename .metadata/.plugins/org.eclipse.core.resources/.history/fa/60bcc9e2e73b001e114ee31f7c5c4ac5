@@ -1,0 +1,22 @@
+package aop_p_ex.fish;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class FishDesign {
+	
+	public String catchFish(String mi ) {
+		System.out.println("미끼를 물어분 것이여");
+		return "잡았다! 오늘은 매운탕~";
+	}
+	public String catchFish() {
+		System.out.println("뭔가 허전한디");
+		//return "이걸안가져왔네요";
+		return null;
+	}
+	public String fishSize(int size,String type) {
+		
+		return "이야 크기가 "+size+"cm 이네 종류는 "+type; 
+	}
+	
+}
