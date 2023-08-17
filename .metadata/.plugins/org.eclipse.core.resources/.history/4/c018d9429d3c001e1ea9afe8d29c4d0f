@@ -1,0 +1,18 @@
+package aop_p_ex.fish;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Recode {
+	
+	public int JopClass(int kor, int math) {
+		return 0;
+	}
+	public int NormalClass(int kor, int math, int eng) {
+		return 0;
+	}
+	public int ArtClass(int kor, int math, int eng, int skil) {
+		return 0;
+	}
+	
+}

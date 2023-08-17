@@ -1,0 +1,20 @@
+package aop_p_ex.main;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import aop_p_ex.fish.Restaurant;
+
+public class ARestaurant {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("aop_xml/restaurant.xml");
+		
+		Restaurant restaurant = (Restaurant) context.getBean("restaurant");
+		System.out.println(context.getBeanDefinitionNames());
+		context.close();
+
+	}
+
+}

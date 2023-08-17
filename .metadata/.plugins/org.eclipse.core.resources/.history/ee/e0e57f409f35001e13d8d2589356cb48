@@ -1,6 +1,0 @@
-package Taluga;
-
-public interface Unit {
-	public void go();
-	public void ()
-}

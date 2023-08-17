@@ -1,0 +1,41 @@
+package aop_p_ex.adv;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.aspectj.lang.JoinPoint;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RecodeAdvice {
+	ArrayList<Integer> avglist = new ArrayList<>();
+	
+	
+	
+	int jopClass(JoinPoint joinPoint, int kor, int math) {
+		int total = kor + math;
+		int avg = total / 2;
+		this.avglist.add(avg);
+		System.out.println("직업반 "+avg);
+		return avg;
+	}
+	int artClass(JoinPoint joinPoint, int kor, int math, int eng, int skil) {
+		int total = kor + math + eng + skil;
+		int avg = total / 4;
+		this.avglist.add(avg);
+		System.out.println("예체능반 "+avg);
+		return avg;
+	}
+	int jopClass(JoinPoint joinPoint, int kor, int math) {
+		int total = kor + math;
+		int avg = total / 2;
+		this.avglist.add(avg);
+		System.out.println("직업반 "+avg);
+		return avg;
+	}
+	
+	
+	
+	
+	
+}

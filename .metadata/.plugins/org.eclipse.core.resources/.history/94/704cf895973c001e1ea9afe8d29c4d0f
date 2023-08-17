@@ -1,0 +1,10 @@
+package aop_p.main;
+
+public class AwbMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

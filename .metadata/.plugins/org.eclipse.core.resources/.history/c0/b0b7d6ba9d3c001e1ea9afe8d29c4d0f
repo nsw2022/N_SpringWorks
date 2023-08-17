@@ -1,0 +1,40 @@
+package aop_p_ex.fish;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Recode {
+	ArrayList<Integer> avglist;
+	public int JopClass(int kor, int math) {
+		int total = kor + math;
+		int avg = total / 2;
+		avglist.add(avg);
+		return avg;
+	}
+	
+	public int NormalClass(int kor, int math, int eng) {
+		int total = kor + math + eng;
+		int avg = total / 3;
+		avglist.add(avg);
+		return avg;
+	}
+	
+	public int ArtClass(int kor, int math, int eng, int skil) {
+		int total = kor + math + eng + skil;
+		int avg = total / 4;
+		avglist.add(avg);
+		return avg;
+	}
+	
+	public int AbgList() {
+		int total=0;
+		for (Integer i : avglist) {
+			total+=i;
+		}
+		total/avglist.size();
+		return total; 
+	}
+	
+}

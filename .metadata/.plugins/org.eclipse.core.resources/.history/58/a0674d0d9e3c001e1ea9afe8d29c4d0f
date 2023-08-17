@@ -1,0 +1,10 @@
+package aop_p_ex.adv;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class RecodeAdvice {
+	
+	
+	
+}

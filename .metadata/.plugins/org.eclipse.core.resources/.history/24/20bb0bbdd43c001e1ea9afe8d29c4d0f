@@ -1,0 +1,27 @@
+package aop_p_ex.fish;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Restaurant {
+	
+	// 가격 받았는데 만원 미만이면 bb가 붙음 
+	
+	public String soup(String sname,int sprice) {
+		int bb = 3_000;
+		if (sprice<10_000) {
+			return "국 이름" + sname + "결제금액"+(bb+sprice);
+		}
+		return "국 이름" + sname + "결제금액" + +sprice;
+	}
+	
+	public String rice(String rname, int rprice) {
+		int bb = 3_000;
+		if (rprice<10_000) {
+			return "덮밥 이름" + rname + "결제금액"+(bb+rprice);
+		}
+		
+		return "덮밥 이름" + rname + "결제금액" + +rprice;
+	}
+
+}

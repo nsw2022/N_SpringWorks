@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import org.springframework.stereotype.Component;
 
-@Component("Fi")
+
 public class FigureCal {
 	
 	HashMap<String, Figure> map;

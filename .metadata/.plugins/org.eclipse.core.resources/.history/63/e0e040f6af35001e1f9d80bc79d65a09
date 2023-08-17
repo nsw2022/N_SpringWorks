@@ -1,5 +1,0 @@
-package bycycleCategory;
-
-public interface Bycycle {
-
-}

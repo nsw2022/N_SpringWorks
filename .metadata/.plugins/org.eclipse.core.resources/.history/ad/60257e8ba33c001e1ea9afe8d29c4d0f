@@ -1,0 +1,21 @@
+package aop_p_ex.adv;
+
+import java.util.ArrayList;
+
+import org.aspectj.lang.JoinPoint;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RecodeAdvice {
+	ArrayList<Integer> avglist = new ArrayList<>();
+	int jopClass(JoinPoint joinPoint, int kor, int math) {
+		int total = kor + math;
+		int avg = total / 2;
+		this.avglist.add(avg);
+		System.out.println("직업반 "+avg);
+		return avg;
+	}
+	
+	
+	
+}

@@ -1,9 +1,0 @@
-package bycycle;
-
-public interface BycycleCategory {
-	
-}
-
-
-// 클래스마다
-// 바퀴 핸들 바구니 주고

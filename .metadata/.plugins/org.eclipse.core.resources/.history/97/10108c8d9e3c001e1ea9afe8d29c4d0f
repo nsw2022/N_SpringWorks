@@ -1,0 +1,13 @@
+package aop_p_ex.main;
+
+public class RecodeMain {
+	
+	public static void main(String[] args) {
+		Record record = new Record();
+		
+		
+		
+		
+	}
+	
+}

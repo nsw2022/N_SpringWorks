@@ -1,0 +1,46 @@
+package aop_p_ex.fish;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Recode {
+	ArrayList<Integer> avglist = new ArrayList<>();
+	public int jopClass(int kor, int math) {
+		int total = kor + math;
+		int avg = total / 2;
+		this.avglist.add(avg);
+		System.out.println("직업반 "+avg);
+		return avg;
+	}
+	
+	public int normalClass(int kor, int math, int eng) {
+		int total = kor + math + eng;
+		int avg = total / 3;
+		this.avglist.add(avg);
+		System.out.println("일반학생 "+avg);
+		return avg;
+	}
+	
+	public int artClass(int kor, int math, int eng, int skil) {
+		int total = kor + math + eng + skil;
+		int avg = total / 4;
+		this.avglist.add(avg);
+		System.out.println("예체능반 "+avg);
+		return avg;
+	}
+	
+	public int avgList() {
+		int total=0;
+		for (Integer i : this.avglist) {
+			total+=i;
+		}
+		total = total / avglist.size();
+		System.out.println("평균의 평균" + total);
+		return total; 
+	}
+
+
+	
+}

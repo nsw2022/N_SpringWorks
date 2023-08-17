@@ -1,7 +1,0 @@
-package Taluga;
-
-public interface Unit {
-	public void go(int handle);
-	public void fix();
-	public void fall(); 
-}

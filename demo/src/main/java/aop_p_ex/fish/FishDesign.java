@@ -2,7 +2,7 @@ package aop_p_ex.fish;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class FishDesign {
 	
 	public String catchFish(String mi ) {

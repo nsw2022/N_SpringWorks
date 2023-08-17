@@ -1,9 +1,0 @@
-package bycycleCategory;
-
-public interface Bycycle {
-	public void go();
-	public void go();
-	public void go();
-		
-	
-}
