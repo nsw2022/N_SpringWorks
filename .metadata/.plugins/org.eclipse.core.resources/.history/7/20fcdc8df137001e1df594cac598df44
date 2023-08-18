@@ -1,9 +1,0 @@
-package di_p_main;
-
-public class ColorStuMain {
-	
-	public static void main(String[] args) {
-		
-	}
-	
-}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- table>tr*11>td+td>input[name]> -->
+	<!--
+		1. ArrayList로만하기
+		2. Map쓰기
+		3. Map안에 List 카테고리
+		
+	 -->
+	<form action="seungwoo">
+		<table border="">
+			<tr>
+				<td>아이디</td>
+				
+				<td>[[${sform.id}]]</td>
+				<td><input type="text" th:value="${id}" /></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td>[[${sform.pw}]]</td>
+			</tr>
+			<tr>
+		
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
