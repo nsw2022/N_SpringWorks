@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>랜덤 점수 들가자!</title>
+</head>
+<body>
+    <form action="randomResult">
+    <h1>당신의 점수를 입력해주세요</h1>
+    <table border="">
+        <tr>
+            <td>no</td>
+            <td>특기생구분</td>
+            <td>반구분</td>
+            <td>남여구분</td>
+            <td>이름</td>
+            <td>국어</td>
+            <td>영어</td>
+            <td>수학</td>
+        </tr>
+        
+	    <tr th:each="student, idx : ${studentList.students}" align="center">
+				
+            <td th:text="${idx.index + 1}"></td>
+            <td><input type="text" value="예체능"/></td>
+            <td><input type="text" th:value="${student.ban}" th:name="|students[${idx.index}].ban|" /></td>
+            <td><input type="text" th:value="${student.gender}" th:name="|students[${idx.index}].gender|" /></td>
+            <td><input type="text" th:value="${idx.index+1}+'승우'" th:name="|students[${idx.index}].name|" /></td>
+            <td><input type="number" min="0" max="100" th:name="|students[${idx.index}].kor|" th:value="${student.kor}"/></td>
+            <td><input type="number" min="0" max="100" th:name="|students[${idx.index}].eng|" th:value="${student.eng}"/></td>
+            <td><input type="number" min="0" max="100" th:name="|students[${idx.index}].math|" th:value="${student.math}" /></td>
+            
+        </tr>
+        
+        <tr rowspan="8">
+            <td colspan="8" align="center" style="width: 1000px;">
+                <input type="submit" style="width: 100%;height: 50px;"/>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

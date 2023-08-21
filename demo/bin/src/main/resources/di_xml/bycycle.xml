@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean class="Taluga.Bycycle" name="xb">
+		<property name="ba">
+			<value>3</value>
+			
+		</property>
+		<property name="handel">
+			<value>핸들</value>
+		</property>
+	</bean>
+	
+	<bean class="Taluga.Bycycle" name="xb2">
+		<property name="ba">
+			<value>3</value>
+			
+		</property>
+		<property name="handel">
+			<value>핸들</value>
+		</property>
+	</bean>
+
+</beans>

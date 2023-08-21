@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>랜덤 결과 확인</title>
+</head>
+<body>
+    <h1>랜덤 결과 확인</h1>
+    <table border="">
+        <tr>
+            <th>순위</th>
+            <th>반</th>
+            <th>성별</th>
+       		<th>등급</th>
+            <th>총점</th>
+            <th>평균</th>
+            <th>이름</th>
+        </tr>
+        
+        <tr th:each="student, idx : ${studentList.students}" align="center">
+        
+            <td th:text="${student.rank}"></td>
+            <td><span th:text="${student.ban}"></span></td>
+            <td><span th:text="${student.gender}"></span></td>
+            <td><span th:text="${student.grade}"></span></td>
+            <td><span th:text="${student.total}"></span></td>
+            <td><span th:text="${student.avg}"></span></td>
+            <td><span th:text="${student.name}"></span></td>
+        	    
+        </tr>
+    </table>
+</body>
+</html>
