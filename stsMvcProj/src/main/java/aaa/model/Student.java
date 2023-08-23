@@ -36,6 +36,8 @@ public class Student implements Comparable<Student>{
 		}
 	}
 
+	
+	
 	@Override
 	public int compareTo(Student o) {
 		int res = rank - o.rank;
@@ -44,4 +46,20 @@ public class Student implements Comparable<Student>{
 		}
 		return res;
 	}
+	
+
+	public Student(String name, double... jum) {
+		super();
+		this.name = name;
+		this.jum = new ArrayList<>();
+		for (Double i : jum) {
+			this.jum.add(i);
+		}
+	}
+
+	public Student() {
+		
+	}
+
+	
 }

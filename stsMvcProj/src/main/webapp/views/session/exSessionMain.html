@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>메인입니다</h1>
+<div th:if="${session.mem != null}">
+	[[${session.mem.pname}]]님 안녕하세요
+	<a href="ex_session_delete">로그아웃</a>
+</div>
+
+<div th:unless="${session.mem != null}"}>
+<form action="ex_session_reg">
+	<input type="text" name="id" />
+	<input type="text" name="pw" />
+	<input type="submit" value="전송" />
+</form>
+</div>
+
+</body>
+</html>

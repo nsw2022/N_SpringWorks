@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>model/season</title>
+<style>
+	tr>td>img{
+		width: 100px;
+		height: 100px;
+		
+	}
+
+</style>
+</head>
+<body>
+<h1>model/season</h1>
+
+<table border="">
+	<tr>
+		<td width="500px" >
+			<table width="100%">
+				<tr>
+					<td th:each="md : ${hNav}" >
+						<a th:href="|?sn=${md.url}|" th:text="${md.txt}"></a>
+					</td>
+
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img th:each="mc:${mainCt}" th:src="|/sn/${mc}|" alt="" />
+		
+		</td>
+	</tr>
+	<tr>
+		<td>[[${fTxt}]]</td>
+	</tr>
+	
+	
+</table>
+
+
+
+</body>
+</html>
