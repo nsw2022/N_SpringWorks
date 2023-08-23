@@ -37,7 +37,7 @@ public class ModelSeasonController {
 	
 	@ModelAttribute("mainCt")
 	Object mainContent(
-			@RequestParam(value = "sn" , defaultValue = "sn") String sn) {
+			@RequestParam(value = "sn" , defaultValue = "spring") String sn) {
 		
 
 		return sMain.getPicture(sn);
