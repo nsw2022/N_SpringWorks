@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="">
+	<tr>
+	<td>이름</td>
+		<td>국어</td>
+		<td>영어</td>
+		<td>수학</td>
+		<td>총점</td>
+		<td>평균</td>
+		<td>등수</td>
+		<td>성별</td>
+		<td>반별</td>
+	</tr>
+	<tr th:each="st : ${MStuReg.mstre}">
+	
+		<td th:text="${st.name}"></td>
+		<td th:text="${st.jum[0]}"></td>
+		<td th:text="${st.jum[1]}"></td>
+		<td th:text="${st.jum[2]}"></td>
+		<td th:text="${st.tot}"></td>
+		<td th:text="${st.avg}"></td>
+		<td th:text="${st.rank}"></td>
+		<td th:text="${st.gender}"></td>
+		<td th:text="${st.ban}"></td>
+		
+	</tr>
+	<tr>
+		<td>성적순보기</td>
+		<td>반별보기</td>
+		<td>성별(남)</td>
+		<td>성별(여)</td>
+		<td>한반씩보기</td>
+	</tr>
+</table>
+</body>
+</html>

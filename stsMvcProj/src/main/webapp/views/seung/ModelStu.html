@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>반별가즈아</title>
+</head>
+<body>
+<form action="ModelStuReg">
+<table border="">
+	<tr>
+		<td>이름</td>
+		<td>반</td>
+		<td>국어</td>
+		<td>영어</td>
+		<td>수학</td>
+		<td>성별</td>
+	</tr>
+	<tr th:each="no: ${#numbers.sequence(0,20)}">
+		<td><input type="text" th:name="|arr[${no}].name|" th:value="|학생${no}|"/> </td>
+		<td><input type="text" th:name="|arr[${no}].ban|"
+		th:value="${T(java.lang.Math).round(T(java.lang.Math).random()*4)+1}" /></td>
+		<td><input type="text" th:name="|arr[${no}].jum[0]|"
+		th:value="${T(java.lang.Math).round(T(java.lang.Math).random()*100)}" /></td>
+		<td><input type="text" th:name="|arr[${no}].jum[1]|"
+		th:value="${T(java.lang.Math).round(T(java.lang.Math).random()*100)}" /></td>
+		<td><input type="text" th:name="|arr[${no}].jum[2]|"
+		th:value="${T(java.lang.Math).round(T(java.lang.Math).random()*100)}" /></td>
+
+		<td><input type="text" th:name="|arr[${no}].gender|"
+         th:value="${T(java.lang.Math).random() < 0.5 ? '남' : '여'}"/></td>
+	</tr>
+	<tr rowspan="8">
+		<td colspan="8" align="center" style="width: 1000px;">
+			<input type="submit" style="width: 100%;height: 50px;" />
+		</td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>
