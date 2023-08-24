@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- lalala 입니다 : 이것으로 출력 
+토탈입니다는 출력되지 않음 -->
+<title>토탈 입니다.</title>
+</head>
+<body>
+<h2>내가 곧 토탈이다</h2>
+<table border="">
+	<tr>
+		<td colspan="2"  >
+			<!-- includ -->
+			<th:block th:replace="|thymeleaf/inc/${headUrl}|" />
+		</td>
+	</tr>
+	<tr>
+		<td width="200px">
+			<th:block th:replace="thymeleaf/inc/aside"/>
+		</td>
+		
+		<td width="500px">
+			<th:block th:replace="thymeleaf/inc/bbbody"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<th:block layout:fragment="fff" />
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>model/season</title>
+<style>
+	tr>td>img{
+		width: 100px;
+		height: 100px;
+		
+	}
+
+</style>
+</head>
+<body>
+<h1>model/season</h1>
+
+<table border="">
+	<tr>
+		<td width="500px" >
+			<th:block th:replace="seung/header" />
+			
+			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img th:each="mc:${mainCt}" th:src="|/sn/${mc}|" alt="" />
+		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<th:block th:replace="seung/fotter" />
+		</td>
+	</tr>
+	
+	
+</table>
+
+
+
+</body>
+</html>

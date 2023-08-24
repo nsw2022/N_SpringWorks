@@ -22,6 +22,16 @@ public class ThymeleafController {
 		return "thymeleaf/controll";
 	}
 	
+	@RequestMapping("lay")
+	String lay(Model mm) {
+		
+		mm.addAttribute("headUrl","hd_2");
+		mm.addAttribute("pid","aaa");
+		mm.addAttribute("arr",new int[] {77,66,33,99});
+		mm.addAttribute("age",35);
+		return "thymeleaf/lala";
+	}
+
 	
 	
 }

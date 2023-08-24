@@ -1,0 +1,8 @@
+<table width="100%">
+	<tr>
+		<td th:each="md : ${hNav}">
+			<a th:href="|${md.url}|" th:text="${md.txt}"></a>
+		</td>
+
+	</tr>
+</table>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="seung/inc/total">
+
+<head>
+	<meta charset="UTF-8">
+	
+</head>
+
+<body>
+
+</body>
+
+<th:block layout:fragment="hh">
+	<table width="50%" border="">
+		<tr>
+			<td th:each="md : ${hNav}" align="center">
+				<a th:href="|?sn=${md.url}|" th:text="${md.txt}"></a>
+			</td>
+		</tr>
+	</table>
+</th:block>
+
+<th:block layout:fragment="bb">
+<table border="" width="50%">
+<td style="display: flex; justify-content: space-around;">
+	<img th:each="mc:${mainCt}" th:src="|/sn/${mc}|" 
+		alt="" style="width: 200px; height: 250px;
+		background-size: cover; 
+		margin: 8px;" />
+</td>
+</table>
+</th:block>
+<th:block layout:fragment="ff">
+<table border="" width="50%">
+<tr>
+	<td>[[${fTxt}]]</td>
+</tr>
+</table>
+</th:block>
+
+</html>

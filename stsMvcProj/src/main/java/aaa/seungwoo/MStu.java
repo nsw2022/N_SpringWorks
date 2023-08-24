@@ -10,7 +10,7 @@ import lombok.Data;
 public class MStu implements Comparable<MStu>{
 	String name, gender;
 	List<Integer> jum;
-	int rank,tot, avg , ban;
+	int rank,tot, avg , ban, state;
 	
 	
 	public int getTot() {
@@ -40,7 +40,7 @@ public class MStu implements Comparable<MStu>{
 	
 	@Override
 	public int compareTo(MStu o) {
-		
+
 		// 성적별
 		int res = Integer.compare(rank, o.rank); 
 		// 흠 ~별 요소는 어처피 여기서 제어
@@ -52,11 +52,10 @@ public class MStu implements Comparable<MStu>{
 			
 			res = Integer.compare(ban, o.ban);
 		}
-		
+	
+		return res;
 	
 		
-		
-		return res;
 	}
 
 	public MStu(String name, String gender, int...jum) {
