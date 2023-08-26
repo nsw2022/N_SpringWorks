@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>게시판 목록</title>
+</head>
+
+<body>
+	<h1>게시판 목록</h1>
+	<table border="">
+		<tr align="center">
+			<th width="50px">게시글번호</th>
+			<th width="500px">제목</th>
+			<th width="100px">작성자</th>
+			<th width="200px">작성일</th>
+			<th width="50px">조회수</th>
+
+		</tr>
+		<tr th:each="board : ${boardList}">
+			<td th:text="${board.id}"></td>
+			<td><a th:href="@{/board/detail/{id}(id=${board.id})}" th:text="${board.title}" width="500px"></a></td>
+			<td th:text="${board.pname}"></td>
+			<!-- sdf가 객체라 #으로 접근해야함 -->
+			<td th:text="${#dates.format(board.reg_date, 'yyyy-MM-dd (E) HH:mm')}"></td>
+
+			<td th:text="${board.cnt}"></td>
+		</tr>
+		
+		<tr>
+			<td colspan="5" align="right">
+				<a href="BWrite">글쓰기</a>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

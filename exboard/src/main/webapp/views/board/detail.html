@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세 정보</title>
+</head>
+<body>
+	<input type="hidden" name="id" th:value="${id}" />
+    <table border="">
+        <tr>
+            <td width="200px">id</td>
+            <td width="700px" th:text="${boardDetail.id}"></td>
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td th:text="${boardDetail.title}"></td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td th:text="${boardDetail.pname}"></td>
+        </tr>
+        <tr>
+            <td>작성일</td>
+            <td th:text="${boardDetail.reg_dateStr}"></td>
+        </tr>
+        <tr>
+            <td>조회수</td>
+            <td th:text="${boardDetail.cnt}"></td>
+        </tr>
+        <tr th:if="${not #strings.isEmpty(boardDetail.upfile)}">
+            <td>파일</td>
+            <td>
+                <span th:if="${boardDetail.upfile}">
+                    <img width="500px" th:src="@{/up/{filename}(filename=${boardDetail.upfile})}"
+    							alt="" th:alt="${boardDetail.upfile}" />
+    				
+    				<th:block th:text="${boardDetail.upfile}" />
+                </span>
+         
+            </td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td th:utext="${boardDetail.content}"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <a th:href="@{/board/list}">목록으로</a>
+                <a th:href="@{/board/BDeleteForm(id=${boardDetail.id})}">삭제</a>
+                <a th:href="@{/board/BModifyForm(id=${boardDetail.id})}">수정</a>
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

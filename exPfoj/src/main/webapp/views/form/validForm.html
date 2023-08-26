@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	td>div{
+		background-color: red;
+
+	}
+	
+</style>
+
+</head>
+<body>
+<h1>validForm</h1>
+
+<!--form>table>tr*7>td+td>input>-->
+<form action="" method="post" th:object="${joinData}">
+	<table border="">
+		<tr>
+			<td>id</td>
+			<td><input type="text"  th:field="*{pid}" />
+			<div th:if="${#fields.hasErrors('pid')}" th:errors="*{pid}"/>
+			</td>
+		</tr>
+		<tr>
+			<td>name</td>
+			<td><input type="text"  th:field="*{pname}" />
+			<div th:if="${#fields.hasErrors('pname')}" th:errors="*{pname}" />
+			</td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="text" th:field="*{pw1}" />
+			<div th:if="${#fields.hasErrors('pw1')}" th:errors="*{pw1}" />
+			</td>
+		</tr>
+		<tr>
+			<td>비밀번호 확인</td>
+			<td><input type="text" th:field="*{pw2}"  /></td>
+		</tr>
+		<tr>
+			<td>국어</td>
+			<td><input type="number" th:field="*{kor}"  />
+			<div th:if="${#fields.hasErrors('kor')}" th:errors="*{kor}" />
+			</td>
+		</tr>
+		<tr>
+			<td>영어</td>
+			<td><input type="number" th:field="*{eng}"  />
+			<div th:if="${#fields.hasErrors('eng')}" th:errors="*{eng}" />
+			</td>
+		</tr>
+		<tr>
+			<td>수학</td>
+			<td><input type="number" th:field="*{math}"  />
+			<div th:if="${#fields.hasErrors('math')}" th:errors="*{math}" />
+			</td>
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td><input type="text" th:field="*{email}" />
+			<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" />
+			</td>
+		</tr>
+		<tr>
+			<td>생년월일</td>
+			<td><input type="date"  th:field="*{birth}" />
+			<div th:if="${#fields.hasErrors('birth')}" th:errors="*{birth}" />
+			</td>
+		</tr>
+		<tr>
+			<td>반</td>
+			<td><input type="text" th:field="*{ban}"/>
+			<div th:if="${#fields.hasErrors('ban')}" th:errors="*{ban}" />
+			</td>
+		</tr>
+		<tr>
+		
+			<td colspan="2">
+				<input type="submit" value="가입" />
+			</td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>

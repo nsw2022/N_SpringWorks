@@ -31,4 +31,18 @@ public class Person {
 		this.pw = pw;
 	}
 	
+	public boolean idPwChk(Person other) {
+	
+		
+		return id.equals(other.id) && pw.equals(other.pw);
+	}
+
+
+
+	public Person() {
+		super();
+	}
+	
+	
+	
 }

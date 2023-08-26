@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Modification</title>
+</head>
+<body>
+<form th:action="@{/board/BModifyReg}" method="post" enctype="multipart/form-data">
+    <table border="">
+        <tr>
+            <td width="200px">id</td>
+            <td width="700px">
+                <input type="text" name="id" th:value="${boardDetail.id}" readonly="readonly"/>
+            </td>
+        </tr>
+        <tr>
+            <td>제목</td>
+            <td><input type="text" name="title" th:value="${boardDetail.title}" /></td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td><input type="text" name="pname" th:value="${boardDetail.pname}" /></td>
+        </tr>
+        <tr>
+            <td>작성일</td>
+            <td th:text="${#dates.format(boardDetail.reg_date, 'yyyy-MM-dd (E) HH:mm')}" ></td>
+        </tr>
+        <tr>
+            <td>조회수</td>
+            <td th:text="${boardDetail.cnt}"></td>
+        </tr>
+        <tr>
+            <td>암호</td>
+            <td><input type="text" name="pw" /></td>
+        </tr>
+        
+        <tr>
+            <td>내용</td>
+            <td><textarea name="content" id="" cols="30" rows="10" th:text="${boardDetail.content}"></textarea></td>
+        </tr>
+        <tr th:if="${not #strings.isEmpty(boardDetail.upfile)}">
+            <td>파일</td>
+            <td>
+                <span th:if="${boardDetail.upfile}">
+                    <span th:text="${boardDetail.upfile}"></span>
+                    <input type="button" value="파일삭제" />
+                </span>
+            </td>
+        </tr>
+        <tr>
+			<td>수정전 사진</td>
+        	<td>
+				<span><img width="500px" th:src="@{/up/{filename}(filename=${boardDetail.upfile})}"
+    							alt="" th:alt="${boardDetail.upfile}" /></span>
+			</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="수정하기" />
+                <input type="reset" value="초기화" />
+                <a th:href="@{/board/detail/{id}(id=${param.id})}">뒤로</a>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
