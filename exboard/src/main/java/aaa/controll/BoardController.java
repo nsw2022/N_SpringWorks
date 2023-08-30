@@ -110,6 +110,7 @@ public class BoardController {
     public String deleteForm() {
     	return "board/BDeleteForm";
     }
+    
   
     @RequestMapping(value = "/BDeleteReg", method = RequestMethod.POST)
     public String deleteBoard(@ModelAttribute BoardDTO boardDTO) {
@@ -120,7 +121,7 @@ public class BoardController {
         System.out.println(deletedBoard);
         if (deletedBoard != null) {
             // 비밀번호 일치하는 경우 삭제 로직 수행
-            // 파일 삭제 수행할 계획.. 아무리봐도 같은데 null로 오네요..
+            
             boardDAO.delete(boardDTO); 
             return "redirect:/board/list"; 
         } else {
@@ -137,6 +138,7 @@ public class BoardController {
     }
     
     /*
+     * 흠... 왜안되는걸까요
     <a th:href="@{/board/BModifyForm(id=${boardDetail.id})}">수정</a>
     @RequestMapping("/BModifyForm/{id}")
     public String modifyBoardForm(@PathVariable int id, Model model) {
@@ -146,5 +148,27 @@ public class BoardController {
     }
     */
     
-	
+    @RequestMapping(value = "/BModifyReg", method = RequestMethod.POST)
+    public String modifyBoard(@ModelAttribute BoardDTO boardDTO) {
+        BoardDAO boardDAO = new BoardDAO();
+        System.out.println(boardDTO.getId()+"있나요그대"+boardDTO.getPw());
+        // id와 pw를 이용하여 수정 가능한지 확인 둘다오는데 왜 null이라고 할까요..
+        BoardDTO plz = boardDAO.idPwCheck(boardDTO);
+        
+        if (plz != null) {
+            int result = boardDAO.moidfy(boardDTO); // 게시글 수정
+            
+            if (result > 0) {
+                return "redirect:/board/list"; // 수정 후 목록으로 이동
+            } else {
+                // 수정 실패 처리
+                // 메시지를 설정하여 화면에 띄울 수 있음
+                return "board/BModifyForm"; // 수정 폼으로 다시 이동
+            }
+        } else {
+            // 비밀번호 불일치 시 처리
+            // 메시지를 설정하여 화면에 띄울 수 있음
+            return "board/BModifyForm"; // 수정 폼으로 다시 이동
+        }
+    }
 }

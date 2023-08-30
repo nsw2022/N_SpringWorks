@@ -1,0 +1,14 @@
+Open Api 파싱
+지도,로그인기능(간편로그인)
+
+RestfulAPI
+세션발급 (되면 JWT로도 해보고싶음)
+
+Push Service // fire base(구글) 노티피케이션 (알림)
+
+===모르는 단어 공부장
+mas
+docker -> 개발환경 셋팅 그대로 옮김 
+aws
+
+---와씨 파이썬 개어려움

@@ -39,11 +39,7 @@ public class ValidController {
 			//System.out.println("이벤트 체크");
 			return "form/validForm";
 		}
-		
-		// 성적을 입력받아 처리하세요
-		// 이름 - 한글만 2-5
-		// 국영수 숫자 0-100
-		
+	
 		// 에러가 없으면
 		return "form/validReg";
 	}

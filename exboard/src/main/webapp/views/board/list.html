@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
 	<meta charset="UTF-8">
-	<title>게시판 목록</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>공지사항</title>
+	<link rel="stylesheet" href="./resources/css/css.css">
+	<link rel="stylesheet" th:href="@{/css/css.css}">
+	
+
+
 </head>
 
 <body>
-	<h1>게시판 목록</h1>
-	<table border="">
-		<tr align="center">
-			<th width="50px">게시글번호</th>
-			<th width="500px">제목</th>
-			<th width="100px">작성자</th>
-			<th width="200px">작성일</th>
-			<th width="50px">조회수</th>
+	<div class="board_wrap">
+		<div class="board_title">
+			<strong>공지사항</strong>
+			<p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+		</div>
+		<div class="board_list_wrap">
+			<div class="board_list">
+				<div class="top">
+					<div class="num">번호</div>
+					<div class="title">제목</div>
+					<div class="writer">글쓴이</div>
+					<div class="date">작성일</div>
+					<div class="count">조회</div>
+				</div>
+				<div>
+					<th:block th:each="board : ${boardList}">
+						<div class="num" th:text="${board.id}"></div>
+						<div class="title"><a th:href="@{/board/detail/{id}(id=${board.id})}"
+								th:text="${board.title}"></a>
+						</div>
+						<div class="writer" th:text="${board.pname}"></div>
+						<div class="date" th:text="${#dates.format(board.reg_date, 'yyyy.MM.dd (E)')}"></div>
+						<div class="count" th:text="${board.cnt}"></div>
+					</th:block>
+				</div>
 
-		</tr>
-		<tr th:each="board : ${boardList}">
-			<td th:text="${board.id}"></td>
-			<td><a th:href="@{/board/detail/{id}(id=${board.id})}" th:text="${board.title}" width="500px"></a></td>
-			<td th:text="${board.pname}"></td>
-			<!-- sdf가 객체라 #으로 접근해야함 -->
-			<td th:text="${#dates.format(board.reg_date, 'yyyy-MM-dd (E) HH:mm')}"></td>
 
-			<td th:text="${board.cnt}"></td>
-		</tr>
-		
-		<tr>
-			<td colspan="5" align="right">
-				<a href="BWrite">글쓰기</a>
-			</td>
-		</tr>
-	</table>
+
+				<div class="bt_wrap">
+					<a href="BWrite" class="on">등록</a>
+					<!--<a href="#">수정</a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
 </body>
 
 </html>

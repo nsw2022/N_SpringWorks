@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="aaa.service.BoardMapper">
+	<select id="list" resultType="bDTO">
+		select * from board order by id desc
+	</select>
+	
+	<select id="list2" resultType="bDTO">
+		select * from board order by id desc, seq limit ${start}, #{limit}
+	</select>
+	
+	<select id="detail" resultType="bDTO" parameterType="Integer">
+		select * from board where id = #{id}
+	</select>
+	
+	<insert id="insseerr" parameterType="bDTO">
+		insert into board (title, pname, pw, content, upfile, reg_date, cnt, seq, lev, gid)
+		values
+		(#{title},#{pname},#{pw},#{content},#{upfile},sysdate(), 0, 0, 0, #{gid})
+	</insert>
+	
+	<delete id="delettt" parameterType="bDTO">
+		delete from board where id = #{id} and pw = #{pw}
+	</delete>
+	
+	<update id="modifffy" parameterType="bDTO">
+		update board set title = #{title}, pname = #{pname}, upfile = #{upfile}, content = #{content}
+		where id = #{id} and pw = #{pw}
+	</update>
+	
+	<select id="idCheck" parameterType="bDTO" resultType="Integer">
+		select count(*) from board where id = #{id} and pw = #{pw}
+		
+	</select>
+	
+	<update id="addCount" parameterType="Integer">
+		update board set cnt = cnt + 1 where id = #{id}
+	</update>
+	
+	<select id="totalCnt">
+		select count(*) from board
+	</select>
+	
+	<select id="maxI" resultType="Integer">
+		select max(id) from board
+	</select>
+	
+	<update id="reply" parameterType="bDTO">
+		update board set seq = seq + 1 where gid = #{gid} and seq > #{seq}
+	</update>
+
+</mapper>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Form</title>
+</head>
+<body>
+    <h1>Reservation Form</h1>
+
+    <form action="/reservation" method="post" th:object="${reservationData}">
+        <div>
+            <label for="branchName">지점명:</label>
+            <input type="text" id="branchName" th:field="*{branchName}" />
+            <div th:if="${#fields.hasErrors('branchName')}" th:errors="*{branchName}"></div>
+        </div>
+
+        <div>
+            <label for="roomName">호실명:</label>
+            <input type="text" id="roomName" th:field="*{roomName}" />
+            <div th:if="${#fields.hasErrors('roomName')}" th:errors="*{roomName}"></div>
+        </div>
+
+        <div>
+            <label for="reservationDate">예약일:</label>
+            <input type="date" id="reservationDate" th:field="*{reservationDate}" />
+            <div th:if="${#fields.hasErrors('reservationDate')}" th:errors="*{reservationDate}"></div>
+        </div>
+
+        <div>
+            <label for="reservationTime">예약 시간:</label>
+            <select id="reservationTime" th:field="*{reservationTime}">
+                <option value="" disabled selected>시간 선택</option>
+                <option value="09:00">09:00</option>
+                <!-- 시간 선택 옵션을 여기에 추가 -->
+                <option value="22:00">22:00</option>
+            </select>
+            <div th:if="${#fields.hasErrors('reservationTime')}" th:errors="*{reservationTime}"></div>
+        </div>
+
+        <div>
+            <label for="guestName">예약자 성함:</label>
+            <input type="text" id="guestName" th:field="*{guestName}" />
+            <div th:if="${#fields.hasErrors('guestName')}" th:errors="*{guestName}"></div>
+        </div>
+
+        <div>
+            <label for="phoneNumber">전화번호:</label>
+            <input type="tel" id="phoneNumber" th:field="*{phoneNumber}" />
+            <div th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
+        </div>
+
+        <div>
+            <input type="submit" value="예약하기" />
+        </div>
+    </form>
+</body>
+</html>

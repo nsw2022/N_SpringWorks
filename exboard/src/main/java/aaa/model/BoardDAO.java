@@ -182,5 +182,55 @@ public class BoardDAO {
 		
 	}
 	
+	public BoardDTO idPwCheck(int id, String pw) {
+	    String sql = "select * from board where id = ? and pw = ?";
+	    BoardDTO res = null;
+
+	    try (Connection con = dataSource.getConnection(); 
+	         PreparedStatement ptmt = con.prepareStatement(sql);) {
+	        
+	        ptmt.setInt(1, id);
+	        ptmt.setString(2, pw);
+	        
+	        ResultSet rs = ptmt.executeQuery();
+	        
+	        if (rs.next()) {
+	            res = new BoardDTO();
+	            res.setId(rs.getInt("id"));
+	            res.setUpfile(rs.getString("upfile"));
+	        }
+
+	    } catch (Exception e) {
+	       
+	    }
+	    
+	    return res;
+	}
+	
+	public int moidfy(BoardDTO dto){
+
+		sql = " update board set title = ?, pname=?, upfile=?, content=? "
+			+ " where id=? and pw=?";
+		int res = 0;
+
+		try (Connection con = dataSource.getConnection(); 
+		         PreparedStatement ptmt = con.prepareStatement(sql);){
+			
+			ptmt.setString(1, dto.getTitle());
+			ptmt.setString(2, dto.getPname());
+			ptmt.setString(3, dto.getUpfile());
+			ptmt.setString(4, dto.getContent());
+			ptmt.setInt(5, dto.getId());
+			ptmt.setString(6, dto.getPw());
+
+			res = ptmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return res;
+	}
+	
+	
 
 }
